@@ -1,7 +1,8 @@
 import { Config } from '@stencil/core';
+import tailwind, { tailwindHMR } from 'stencil-tailwind-plugin';
 
 export const config: Config = {
-  namespace: 'rating-compo',
+  namespace: 'dialer-component',
   outputTargets: [
     {
       type: 'dist',
@@ -18,4 +19,5 @@ export const config: Config = {
       serviceWorker: null, // disable service workers
     },
   ],
+  plugins: [tailwind(), tailwindHMR()],
 };

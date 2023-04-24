@@ -8,6 +8,12 @@ import { HTMLStencilElement, JSXBase } from "@stencil/core/internal";
 export namespace Components {
     interface AppDialer {
     }
+    interface AppHome {
+    }
+    interface AppNavbar {
+    }
+    interface AppRoot {
+    }
 }
 declare global {
     interface HTMLAppDialerElement extends Components.AppDialer, HTMLStencilElement {
@@ -16,15 +22,45 @@ declare global {
         prototype: HTMLAppDialerElement;
         new (): HTMLAppDialerElement;
     };
+    interface HTMLAppHomeElement extends Components.AppHome, HTMLStencilElement {
+    }
+    var HTMLAppHomeElement: {
+        prototype: HTMLAppHomeElement;
+        new (): HTMLAppHomeElement;
+    };
+    interface HTMLAppNavbarElement extends Components.AppNavbar, HTMLStencilElement {
+    }
+    var HTMLAppNavbarElement: {
+        prototype: HTMLAppNavbarElement;
+        new (): HTMLAppNavbarElement;
+    };
+    interface HTMLAppRootElement extends Components.AppRoot, HTMLStencilElement {
+    }
+    var HTMLAppRootElement: {
+        prototype: HTMLAppRootElement;
+        new (): HTMLAppRootElement;
+    };
     interface HTMLElementTagNameMap {
         "app-dialer": HTMLAppDialerElement;
+        "app-home": HTMLAppHomeElement;
+        "app-navbar": HTMLAppNavbarElement;
+        "app-root": HTMLAppRootElement;
     }
 }
 declare namespace LocalJSX {
     interface AppDialer {
     }
+    interface AppHome {
+    }
+    interface AppNavbar {
+    }
+    interface AppRoot {
+    }
     interface IntrinsicElements {
         "app-dialer": AppDialer;
+        "app-home": AppHome;
+        "app-navbar": AppNavbar;
+        "app-root": AppRoot;
     }
 }
 export { LocalJSX as JSX };
@@ -32,6 +68,9 @@ declare module "@stencil/core" {
     export namespace JSX {
         interface IntrinsicElements {
             "app-dialer": LocalJSX.AppDialer & JSXBase.HTMLAttributes<HTMLAppDialerElement>;
+            "app-home": LocalJSX.AppHome & JSXBase.HTMLAttributes<HTMLAppHomeElement>;
+            "app-navbar": LocalJSX.AppNavbar & JSXBase.HTMLAttributes<HTMLAppNavbarElement>;
+            "app-root": LocalJSX.AppRoot & JSXBase.HTMLAttributes<HTMLAppRootElement>;
         }
     }
 }
